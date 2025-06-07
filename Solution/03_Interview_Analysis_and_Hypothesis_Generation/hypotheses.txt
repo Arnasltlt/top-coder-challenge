@@ -1,0 +1,144 @@
+# Travel Reimbursement System - Extracted Hypotheses
+
+## PER DIEM CALCULATIONS
+
+### Base Per Diem Rate
+- **Rule:** $100 per day base per diem rate
+- **Hypothesis:** A flat rate of $100 is added to the reimbursement for each `trip_duration_day`.
+
+### Trip Length Bonuses
+- **Rule:** 5-day trips get a bonus
+- **Hypothesis:** Trips with exactly 5 days (`trip_duration_day == 5`) receive an additional bonus amount on top of base per diem.
+
+### Sweet Spot Duration
+- **Rule:** 4-6 day trips get particularly good treatment
+- **Hypothesis:** Trips with duration between 4-6 days (`trip_duration_day >= 4 AND trip_duration_day <= 6`) receive enhanced reimbursement rates.
+
+## MILEAGE CALCULATIONS
+
+### Tiered Mileage System
+- **Rule:** First 100 miles at full rate (58 cents/mile), then drops
+- **Hypothesis:** Mileage reimbursement uses a tiered system: first 100 miles at $0.58/mile, remaining miles at a reduced rate.
+
+### Non-Linear Mileage Curve
+- **Rule:** Mileage follows a logarithmic or curved pattern, not linear
+- **Hypothesis:** Total mileage reimbursement follows a logarithmic curve where per-mile rate decreases as total mileage increases.
+
+### High Mileage Threshold Effects
+- **Rule:** 800-mile trips may get better per-mile rates than 600-mile trips
+- **Hypothesis:** There are specific mileage thresholds (e.g., 800+ miles) that trigger improved per-mile rates.
+
+## EFFICIENCY BONUSES
+
+### Miles-Per-Day Optimization
+- **Rule:** 180-220 miles per day is the optimal range for bonuses
+- **Hypothesis:** Trips with daily mileage between 180-220 miles (`total_mileage / trip_duration_day`) receive efficiency bonuses.
+
+### Efficiency Penalty Thresholds
+- **Rule:** Very low or very high daily mileage gets penalized
+- **Hypothesis:** Daily mileage below 180 or above 220 miles results in reimbursement penalties.
+
+### "Effort" Recognition
+- **Rule:** System rewards high activity/hustle
+- **Hypothesis:** High mileage combined with multi-day trips receives "effort bonuses" beyond standard calculations.
+
+## RECEIPT PROCESSING
+
+### Receipt Reimbursement Curve
+- **Rule:** $600-800 in receipts get optimal treatment, diminishing returns above
+- **Hypothesis:** Receipt reimbursement follows a curve where $600-800 range gets highest percentage reimbursed, with diminishing returns for higher amounts.
+
+### Small Receipt Penalty
+- **Rule:** Very small receipt amounts (under $50-80) get penalized compared to no receipts
+- **Hypothesis:** Submitting receipts under $50 results in lower total reimbursement than submitting no receipts at all.
+
+### Daily Spending Limits
+- **Rule:** Optimal daily spending varies by trip length
+- **Hypothesis:** 
+  - Short trips: under $75/day optimal
+  - Medium trips (4-6 days): up to $120/day optimal  
+  - Long trips: under $90/day optimal
+
+### Receipt Total Caps
+- **Rule:** Hard or soft caps on receipt reimbursement
+- **Hypothesis:** Receipt reimbursement has diminishing returns above certain thresholds, with possible hard caps around $800-1000.
+
+## TEMPORAL FACTORS
+
+### End-of-Quarter Generosity
+- **Rule:** Q4 end and quarter-end periods are more generous
+- **Hypothesis:** Submissions in the last month of quarters, especially Q4, receive bonus multipliers.
+
+### Day-of-Week Effects
+- **Rule:** Tuesday submissions outperform Friday submissions
+- **Hypothesis:** Submission day affects reimbursement with Tuesday > Thursday > other days > Friday.
+
+### Monthly Cycles
+- **Rule:** Early month vs late month differences
+- **Hypothesis:** Submissions in early month (days 1-10) receive different treatment than late month (days 20-31).
+
+### Lunar Cycle Correlation
+- **Rule:** New moon submissions average 4% higher than full moon
+- **Hypothesis:** Reimbursement amounts correlate with moon phases, with new moon periods receiving slight bonuses.
+
+## COMBINATION EFFECTS
+
+### "Sweet Spot Combo"
+- **Rule:** 5 days + 180+ miles/day + under $100/day = guaranteed bonus
+- **Hypothesis:** The combination of exactly 5 days, 180+ daily miles, and under $100 daily spending triggers a guaranteed bonus.
+
+### "Vacation Penalty"
+- **Rule:** 8+ day trips with high spending get penalized
+- **Hypothesis:** Trips of 8+ days with high daily spending (over threshold) receive significant penalties.
+
+### High Mileage + Low Spending Bonus
+- **Rule:** High mileage with modest spending gets rewarded
+- **Hypothesis:** Trips with above-average mileage and below-average spending per day receive efficiency bonuses.
+
+### Low Mileage + High Spending Penalty
+- **Rule:** Low mileage with high spending gets penalized
+- **Hypothesis:** Trips with below-average mileage and above-average spending receive penalties for perceived inefficiency.
+
+## PERSONALIZATION/ADAPTATION
+
+### User History Effects
+- **Rule:** System remembers user history and adjusts accordingly
+- **Hypothesis:** Users with recent high-expense submissions receive reduced reimbursement rates, while users with modest history receive bonuses.
+
+### Department Variations
+- **Rule:** Different departments may have different calculation paths
+- **Hypothesis:** Sales, Finance, Operations, etc. have different base rates or bonus structures.
+
+### Learning/Adaptation Component
+- **Rule:** System evolves user profiles over time
+- **Hypothesis:** The system builds user profiles and adjusts reimbursement algorithms based on historical behavior patterns.
+
+## RANDOMIZATION/NOISE
+
+### Intentional Randomization
+- **Rule:** System includes random variation to prevent gaming
+- **Hypothesis:** 5-10% random variation is added to final reimbursement amounts to prevent predictable optimization.
+
+### External Data Integration
+- **Rule:** System may use market indices or external data for variation
+- **Hypothesis:** Reimbursement calculations incorporate external data sources (market conditions, company performance) as multipliers.
+
+## ROUNDING/CALCULATION QUIRKS
+
+### Favorable Rounding Bug
+- **Rule:** Receipts ending in 49 or 99 cents get extra money
+- **Hypothesis:** Receipt totals ending in specific cent amounts (49¢, 99¢) trigger double-rounding or calculation errors that favor the user.
+
+### Magic Number Theory
+- **Rule:** Certain receipt totals (like $847) are "lucky"
+- **Hypothesis:** Specific total amounts trigger favorable calculation paths due to legacy code or rounding behaviors.
+
+## TRIP CATEGORIZATION
+
+### Multiple Calculation Paths
+- **Rule:** At least 6 different calculation paths based on trip characteristics
+- **Hypothesis:** The system categorizes trips into distinct types (quick/high-mileage, long/low-mileage, balanced, etc.) and applies different calculation algorithms to each category.
+
+### Threshold-Based Categorization
+- **Rule:** Specific combinations trigger different calculation modes
+- **Hypothesis:** Combinations of trip_duration_day, total_mileage, and receipt_total determine which of several calculation algorithms is used for final reimbursement.

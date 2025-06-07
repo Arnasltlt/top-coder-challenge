@@ -1,0 +1,125 @@
+{
+  "model_type": "kevin_multi_path",
+  "categories": {
+    "quick_high_mileage": {
+      "coefficients": [
+        103.42886763311886,
+        0.20691434420248214,
+        0.22477439177969394,
+        0.19543405066773872,
+        0.20362879729330086,
+        0.20691434554244797,
+        -0.00024405612504865278,
+        0.22477439180823983
+      ],
+      "intercept": -73.0927146097597,
+      "r_squared": 0.8103983485752219,
+      "feature_names": [
+        "days",
+        "miles",
+        "receipts",
+        "efficiency",
+        "spending_per_day",
+        "days_x_efficiency",
+        "spending_x_miles",
+        "days_x_spending"
+      ]
+    },
+    "long_low_mileage": {
+      "coefficients": [
+        40.36209660695726,
+        0.08708280630715438,
+        0.5150840147297541,
+        4.387426661977472,
+        -3.6811467548643337,
+        0.0870828063207445,
+        -0.00044858994336174966,
+        0.5150840147292308
+      ],
+      "intercept": 112.6829728696082,
+      "r_squared": 0.8578436732418248,
+      "feature_names": [
+        "days",
+        "miles",
+        "receipts",
+        "efficiency",
+        "spending_per_day",
+        "days_x_efficiency",
+        "spending_x_miles",
+        "days_x_spending"
+      ]
+    },
+    "medium_balanced": {
+      "coefficients": [
+        58.22488574636858,
+        0.3293462318188483,
+        0.2555707656961071,
+        -0.33174225491110143,
+        -0.016536490519364087,
+        0.32934623195889723,
+        -0.0005094325570213518,
+        0.25557076569891174
+      ],
+      "intercept": 139.7342493531512,
+      "r_squared": 0.836711223813584,
+      "feature_names": [
+        "days",
+        "miles",
+        "receipts",
+        "efficiency",
+        "spending_per_day",
+        "days_x_efficiency",
+        "spending_x_miles",
+        "days_x_spending"
+      ]
+    },
+    "efficiency_sweet_spot": {
+      "coefficients": [
+        304.2243672010829,
+        -0.23402253077773405,
+        0.3632085797659007,
+        4.554739277031963,
+        0.5396426011607391,
+        -0.23402253267133913,
+        -0.0025218099054668836,
+        0.36320857963037556
+      ],
+      "intercept": -902.627893704891,
+      "r_squared": 0.8457746243249603,
+      "feature_names": [
+        "days",
+        "miles",
+        "receipts",
+        "efficiency",
+        "spending_per_day",
+        "days_x_efficiency",
+        "spending_x_miles",
+        "days_x_spending"
+      ]
+    },
+    "vacation_penalty": {
+      "coefficients": [
+        120.50008382755155,
+        0.05300337746401517,
+        -0.1284219953400345,
+        6.5371105708963775,
+        2.9583755183133715,
+        0.053003377541771216,
+        -0.0021572732352656853,
+        -0.1284219953321058
+      ],
+      "intercept": 203.29015800831166,
+      "r_squared": 0.6186683641724167,
+      "feature_names": [
+        "days",
+        "miles",
+        "receipts",
+        "efficiency",
+        "spending_per_day",
+        "days_x_efficiency",
+        "spending_x_miles",
+        "days_x_spending"
+      ]
+    }
+  }
+}

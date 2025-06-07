@@ -1,0 +1,40 @@
+{
+  "classification_rules": {
+    "day_threshold": 4.635180995475113,
+    "daily_spending_threshold": 644.4613360177534,
+    "daily_miles_threshold": 317.3513867977474
+  },
+  "cluster_rules": {
+    "0": {
+      "linear_coeffs": {
+        "days": 48.22109652296488,
+        "miles": 0.4674156863863597,
+        "receipts": 0.38572818888035826,
+        "intercept": 267.79891572656993
+      },
+      "avg_rates": {
+        "per_day": 175.97729509390012,
+        "per_mile": 2.344421410737347,
+        "receipt_multiplier": 1.1661759925555404
+      },
+      "r_squared": 0.7880073023485319,
+      "count": 884
+    },
+    "1": {
+      "linear_coeffs": {
+        "days": 68.56745079881244,
+        "miles": 0.27459248645812456,
+        "receipts": 0.3690612569402999,
+        "intercept": 357.9560623213864
+      },
+      "avg_rates": {
+        "per_day": 806.4712068965516,
+        "per_mile": 1.7152275439703866,
+        "receipt_multiplier": 0.8040825733257106
+      },
+      "r_squared": 0.7088515462759757,
+      "count": 116
+    }
+  },
+  "model_type": "employee_classification_inference"
+}

@@ -1,0 +1,602 @@
+[
+  {
+    "case_id": 366,
+    "input": {
+      "trip_duration_days": 11,
+      "miles_traveled": 740,
+      "total_receipts_amount": 1171.99
+    },
+    "expected": 902.09,
+    "predicted": 2167.03,
+    "absolute_error": 1264.94,
+    "error_percentage": 140.22325932002352
+  },
+  {
+    "case_id": 151,
+    "input": {
+      "trip_duration_days": 4,
+      "miles_traveled": 69,
+      "total_receipts_amount": 2321.49
+    },
+    "expected": 322,
+    "predicted": 1512.46,
+    "absolute_error": 1190.46,
+    "error_percentage": 369.70807453416154
+  },
+  {
+    "case_id": 107,
+    "input": {
+      "trip_duration_days": 3,
+      "miles_traveled": 1317.07,
+      "total_receipts_amount": 476.87
+    },
+    "expected": 787.42,
+    "predicted": 1941.33,
+    "absolute_error": 1153.9099999999999,
+    "error_percentage": 146.54314089050317
+  },
+  {
+    "case_id": 710,
+    "input": {
+      "trip_duration_days": 5,
+      "miles_traveled": 516,
+      "total_receipts_amount": 1878.49
+    },
+    "expected": 669.85,
+    "predicted": 1766.26,
+    "absolute_error": 1096.4099999999999,
+    "error_percentage": 163.67992834216614
+  },
+  {
+    "case_id": 748,
+    "input": {
+      "trip_duration_days": 1,
+      "miles_traveled": 809,
+      "total_receipts_amount": 1734.56
+    },
+    "expected": 1447.25,
+    "predicted": 401.3,
+    "absolute_error": 1045.95,
+    "error_percentage": 72.27154949041285
+  },
+  {
+    "case_id": 920,
+    "input": {
+      "trip_duration_days": 1,
+      "miles_traveled": 1041,
+      "total_receipts_amount": 1630.25
+    },
+    "expected": 1466.95,
+    "predicted": 426.1,
+    "absolute_error": 1040.85,
+    "error_percentage": 70.95333855959643
+  },
+  {
+    "case_id": 712,
+    "input": {
+      "trip_duration_days": 1,
+      "miles_traveled": 1058,
+      "total_receipts_amount": 1601.04
+    },
+    "expected": 1465.9,
+    "predicted": 425.5,
+    "absolute_error": 1040.4,
+    "error_percentage": 70.97346340132343
+  },
+  {
+    "case_id": 683,
+    "input": {
+      "trip_duration_days": 8,
+      "miles_traveled": 795,
+      "total_receipts_amount": 1645.99
+    },
+    "expected": 644.69,
+    "predicted": 1676.98,
+    "absolute_error": 1032.29,
+    "error_percentage": 160.12191906187468
+  },
+  {
+    "case_id": 508,
+    "input": {
+      "trip_duration_days": 1,
+      "miles_traveled": 869,
+      "total_receipts_amount": 1498.88
+    },
+    "expected": 1398.94,
+    "predicted": 384.24,
+    "absolute_error": 1014.7,
+    "error_percentage": 72.53348964215763
+  },
+  {
+    "case_id": 495,
+    "input": {
+      "trip_duration_days": 1,
+      "miles_traveled": 1166,
+      "total_receipts_amount": 1423.69
+    },
+    "expected": 1412.13,
+    "predicted": 422.55,
+    "absolute_error": 989.5800000000002,
+    "error_percentage": 70.07711754583502
+  },
+  {
+    "case_id": 939,
+    "input": {
+      "trip_duration_days": 1,
+      "miles_traveled": 1002,
+      "total_receipts_amount": 2320.13
+    },
+    "expected": 1475.4,
+    "predicted": 497.57,
+    "absolute_error": 977.8300000000002,
+    "error_percentage": 66.27558628168633
+  },
+  {
+    "case_id": 648,
+    "input": {
+      "trip_duration_days": 1,
+      "miles_traveled": 1113,
+      "total_receipts_amount": 1536
+    },
+    "expected": 1403.6,
+    "predicted": 426.84,
+    "absolute_error": 976.76,
+    "error_percentage": 69.58962667426619
+  },
+  {
+    "case_id": 559,
+    "input": {
+      "trip_duration_days": 1,
+      "miles_traveled": 1105,
+      "total_receipts_amount": 1432.3
+    },
+    "expected": 1387.17,
+    "predicted": 413.92,
+    "absolute_error": 973.25,
+    "error_percentage": 70.16083104450067
+  },
+  {
+    "case_id": 657,
+    "input": {
+      "trip_duration_days": 1,
+      "miles_traveled": 872,
+      "total_receipts_amount": 2420.07
+    },
+    "expected": 1456.34,
+    "predicted": 488.34,
+    "absolute_error": 968.0,
+    "error_percentage": 66.46799511103177
+  },
+  {
+    "case_id": 599,
+    "input": {
+      "trip_duration_days": 1,
+      "miles_traveled": 993,
+      "total_receipts_amount": 1143.58
+    },
+    "expected": 1328.85,
+    "predicted": 363.79,
+    "absolute_error": 965.06,
+    "error_percentage": 72.62369718177372
+  },
+  {
+    "case_id": 176,
+    "input": {
+      "trip_duration_days": 1,
+      "miles_traveled": 989,
+      "total_receipts_amount": 2196.84
+    },
+    "expected": 1439.17,
+    "predicted": 481.66,
+    "absolute_error": 957.51,
+    "error_percentage": 66.53209836225045
+  },
+  {
+    "case_id": 610,
+    "input": {
+      "trip_duration_days": 1,
+      "miles_traveled": 1068,
+      "total_receipts_amount": 2011.28
+    },
+    "expected": 1421.45,
+    "predicted": 473.22,
+    "absolute_error": 948.23,
+    "error_percentage": 66.70864258327764
+  },
+  {
+    "case_id": 693,
+    "input": {
+      "trip_duration_days": 1,
+      "miles_traveled": 1112,
+      "total_receipts_amount": 2011.44
+    },
+    "expected": 1423.85,
+    "predicted": 480.17,
+    "absolute_error": 943.6799999999998,
+    "error_percentage": 66.2766443094427
+  },
+  {
+    "case_id": 628,
+    "input": {
+      "trip_duration_days": 1,
+      "miles_traveled": 979,
+      "total_receipts_amount": 1292.54
+    },
+    "expected": 1313.53,
+    "predicted": 378.35,
+    "absolute_error": 935.18,
+    "error_percentage": 71.19593766415689
+  },
+  {
+    "case_id": 889,
+    "input": {
+      "trip_duration_days": 1,
+      "miles_traveled": 1035,
+      "total_receipts_amount": 1289.84
+    },
+    "expected": 1317.33,
+    "predicted": 386.86,
+    "absolute_error": 930.4699999999999,
+    "error_percentage": 70.6330228568392
+  },
+  {
+    "case_id": 114,
+    "input": {
+      "trip_duration_days": 5,
+      "miles_traveled": 195.73,
+      "total_receipts_amount": 1228.49
+    },
+    "expected": 511.23,
+    "predicted": 1436.74,
+    "absolute_error": 925.51,
+    "error_percentage": 181.03593294603212
+  },
+  {
+    "case_id": 156,
+    "input": {
+      "trip_duration_days": 1,
+      "miles_traveled": 822,
+      "total_receipts_amount": 2170.53
+    },
+    "expected": 1374.91,
+    "predicted": 452.39,
+    "absolute_error": 922.5200000000001,
+    "error_percentage": 67.0967554239914
+  },
+  {
+    "case_id": 547,
+    "input": {
+      "trip_duration_days": 8,
+      "miles_traveled": 482,
+      "total_receipts_amount": 1411.49
+    },
+    "expected": 631.81,
+    "predicted": 1535.71,
+    "absolute_error": 903.9000000000001,
+    "error_percentage": 143.06516199490355
+  },
+  {
+    "case_id": 769,
+    "input": {
+      "trip_duration_days": 9,
+      "miles_traveled": 597,
+      "total_receipts_amount": 625.99
+    },
+    "expected": 990.84,
+    "predicted": 1882.73,
+    "absolute_error": 891.89,
+    "error_percentage": 90.01352387872915
+  },
+  {
+    "case_id": 81,
+    "input": {
+      "trip_duration_days": 6,
+      "miles_traveled": 204,
+      "total_receipts_amount": 818.99
+    },
+    "expected": 628.4,
+    "predicted": 1511.37,
+    "absolute_error": 882.9699999999999,
+    "error_percentage": 140.51082113303627
+  },
+  {
+    "case_id": 259,
+    "input": {
+      "trip_duration_days": 1,
+      "miles_traveled": 992,
+      "total_receipts_amount": 958.87
+    },
+    "expected": 1222.41,
+    "predicted": 342.86,
+    "absolute_error": 879.5500000000001,
+    "error_percentage": 71.9521273549791
+  },
+  {
+    "case_id": 905,
+    "input": {
+      "trip_duration_days": 2,
+      "miles_traveled": 1158,
+      "total_receipts_amount": 2355.92
+    },
+    "expected": 1528.91,
+    "predicted": 2395.69,
+    "absolute_error": 866.78,
+    "error_percentage": 56.69267648193811
+  },
+  {
+    "case_id": 820,
+    "input": {
+      "trip_duration_days": 9,
+      "miles_traveled": 444,
+      "total_receipts_amount": 725.31
+    },
+    "expected": 1062.52,
+    "predicted": 1917.79,
+    "absolute_error": 855.27,
+    "error_percentage": 80.4944848096977
+  },
+  {
+    "case_id": 122,
+    "input": {
+      "trip_duration_days": 9,
+      "miles_traveled": 259.96,
+      "total_receipts_amount": 554.74
+    },
+    "expected": 835.54,
+    "predicted": 1669.92,
+    "absolute_error": 834.3800000000001,
+    "error_percentage": 99.86116762812075
+  },
+  {
+    "case_id": 664,
+    "input": {
+      "trip_duration_days": 1,
+      "miles_traveled": 1115,
+      "total_receipts_amount": 926.13
+    },
+    "expected": 1192.88,
+    "predicted": 358.54,
+    "absolute_error": 834.3400000000001,
+    "error_percentage": 69.9433304272014
+  },
+  {
+    "case_id": 732,
+    "input": {
+      "trip_duration_days": 9,
+      "miles_traveled": 896,
+      "total_receipts_amount": 1398.54
+    },
+    "expected": 1727.1,
+    "predicted": 2557.88,
+    "absolute_error": 830.7800000000002,
+    "error_percentage": 48.10259973365759
+  },
+  {
+    "case_id": 751,
+    "input": {
+      "trip_duration_days": 8,
+      "miles_traveled": 403,
+      "total_receipts_amount": 654.97
+    },
+    "expected": 895.14,
+    "predicted": 1720.23,
+    "absolute_error": 825.09,
+    "error_percentage": 92.17440847241772
+  },
+  {
+    "case_id": 941,
+    "input": {
+      "trip_duration_days": 9,
+      "miles_traveled": 191,
+      "total_receipts_amount": 789.52
+    },
+    "expected": 1058.5,
+    "predicted": 1875.74,
+    "absolute_error": 817.24,
+    "error_percentage": 77.20736891828058
+  },
+  {
+    "case_id": 243,
+    "input": {
+      "trip_duration_days": 4,
+      "miles_traveled": 286,
+      "total_receipts_amount": 1063.49
+    },
+    "expected": 418.17,
+    "predicted": 1231.16,
+    "absolute_error": 812.99,
+    "error_percentage": 194.41614654327185
+  },
+  {
+    "case_id": 456,
+    "input": {
+      "trip_duration_days": 9,
+      "miles_traveled": 592,
+      "total_receipts_amount": 793.55
+    },
+    "expected": 1235.69,
+    "predicted": 2048.19,
+    "absolute_error": 812.5,
+    "error_percentage": 65.75273733703436
+  },
+  {
+    "case_id": 328,
+    "input": {
+      "trip_duration_days": 9,
+      "miles_traveled": 368,
+      "total_receipts_amount": 495.12
+    },
+    "expected": 847.33,
+    "predicted": 1655.68,
+    "absolute_error": 808.35,
+    "error_percentage": 95.39966718987878
+  },
+  {
+    "case_id": 884,
+    "input": {
+      "trip_duration_days": 2,
+      "miles_traveled": 897,
+      "total_receipts_amount": 2382.39
+    },
+    "expected": 1437.95,
+    "predicted": 2243.17,
+    "absolute_error": 805.22,
+    "error_percentage": 55.9977746096874
+  },
+  {
+    "case_id": 433,
+    "input": {
+      "trip_duration_days": 5,
+      "miles_traveled": 210,
+      "total_receipts_amount": 710.49
+    },
+    "expected": 483.34,
+    "predicted": 1287.34,
+    "absolute_error": 804.0,
+    "error_percentage": 166.34253320643856
+  },
+  {
+    "case_id": 659,
+    "input": {
+      "trip_duration_days": 9,
+      "miles_traveled": 633,
+      "total_receipts_amount": 888.17
+    },
+    "expected": 1384.78,
+    "predicted": 2160.03,
+    "absolute_error": 775.2500000000002,
+    "error_percentage": 55.983621947168515
+  },
+  {
+    "case_id": 881,
+    "input": {
+      "trip_duration_days": 9,
+      "miles_traveled": 578,
+      "total_receipts_amount": 1167.71
+    },
+    "expected": 1587.21,
+    "predicted": 2355.07,
+    "absolute_error": 767.8600000000001,
+    "error_percentage": 48.3779714089503
+  },
+  {
+    "case_id": 124,
+    "input": {
+      "trip_duration_days": 9,
+      "miles_traveled": 194.34,
+      "total_receipts_amount": 1054.93
+    },
+    "expected": 1374.9,
+    "predicted": 2142.55,
+    "absolute_error": 767.6500000000001,
+    "error_percentage": 55.83315150192741
+  },
+  {
+    "case_id": 189,
+    "input": {
+      "trip_duration_days": 9,
+      "miles_traveled": 524,
+      "total_receipts_amount": 474.75
+    },
+    "expected": 935.4,
+    "predicted": 1700.83,
+    "absolute_error": 765.43,
+    "error_percentage": 81.82916399401326
+  },
+  {
+    "case_id": 255,
+    "input": {
+      "trip_duration_days": 9,
+      "miles_traveled": 576,
+      "total_receipts_amount": 1059.79
+    },
+    "expected": 1547.5,
+    "predicted": 2307.71,
+    "absolute_error": 760.21,
+    "error_percentage": 49.12504038772214
+  },
+  {
+    "case_id": 654,
+    "input": {
+      "trip_duration_days": 9,
+      "miles_traveled": 463,
+      "total_receipts_amount": 1024.53
+    },
+    "expected": 1476.48,
+    "predicted": 2224.99,
+    "absolute_error": 748.5099999999998,
+    "error_percentage": 50.69557325530991
+  },
+  {
+    "case_id": 671,
+    "input": {
+      "trip_duration_days": 8,
+      "miles_traveled": 392,
+      "total_receipts_amount": 661.27
+    },
+    "expected": 978.13,
+    "predicted": 1721.91,
+    "absolute_error": 743.7800000000001,
+    "error_percentage": 76.04101704272439
+  },
+  {
+    "case_id": 519,
+    "input": {
+      "trip_duration_days": 14,
+      "miles_traveled": 481,
+      "total_receipts_amount": 939.99
+    },
+    "expected": 877.17,
+    "predicted": 1618.8,
+    "absolute_error": 741.63,
+    "error_percentage": 84.54803515852116
+  },
+  {
+    "case_id": 859,
+    "input": {
+      "trip_duration_days": 9,
+      "miles_traveled": 482,
+      "total_receipts_amount": 1348.44
+    },
+    "expected": 1633.26,
+    "predicted": 2368.97,
+    "absolute_error": 735.7099999999998,
+    "error_percentage": 45.045491838409056
+  },
+  {
+    "case_id": 405,
+    "input": {
+      "trip_duration_days": 2,
+      "miles_traveled": 1139,
+      "total_receipts_amount": 306.43
+    },
+    "expected": 726.14,
+    "predicted": 1461.45,
+    "absolute_error": 735.3100000000001,
+    "error_percentage": 101.26284187622223
+  },
+  {
+    "case_id": 141,
+    "input": {
+      "trip_duration_days": 9,
+      "miles_traveled": 1012,
+      "total_receipts_amount": 1429.04
+    },
+    "expected": 1880.76,
+    "predicted": 2615.75,
+    "absolute_error": 734.99,
+    "error_percentage": 39.079414704693846
+  },
+  {
+    "case_id": 54,
+    "input": {
+      "trip_duration_days": 8,
+      "miles_traveled": 630,
+      "total_receipts_amount": 967.69
+    },
+    "expected": 1388.05,
+    "predicted": 2122.9,
+    "absolute_error": 734.8500000000001,
+    "error_percentage": 52.941176470588246
+  }
+]
