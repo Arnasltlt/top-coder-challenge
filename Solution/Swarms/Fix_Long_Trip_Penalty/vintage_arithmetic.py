@@ -142,6 +142,35 @@ def vintage_calculation(days, miles, receipts, case_index=None):
         # Targets 62 cases with avg under-prediction of $113.23
         bonus = vintage_multiply(base, 0.17)  # 17% bonus for 6-day trips
         base = vintage_add(base, bonus)
+    elif days >= 12:
+        # LONG_TRIP_ENHANCED_PENALTY: Smarter long trip handling
+        # The issue is that long trips vary greatly - some are efficient, others wasteful
+        # Apply logic based on efficiency metrics instead of blanket penalties
+        
+        # Calculate efficiency metrics
+        miles_per_day = miles / days
+        receipts_per_day = receipts / days
+        
+        # Efficient long trips should get a bonus, inefficient ones a penalty
+        if miles_per_day >= 80 and receipts_per_day <= 100:
+            # Efficient long trip: high miles per day, reasonable receipts
+            efficiency_bonus = 1.05  # 5% bonus for efficient long trips
+            base = vintage_multiply(base, efficiency_bonus)
+        elif miles_per_day <= 30 or receipts_per_day <= 20:
+            # Very inefficient long trip: low miles/day or very low receipts/day
+            if days == 12:
+                penalty_multiplier = 0.95  # 5% penalty for inefficient 12-day trips
+            elif days == 13:
+                penalty_multiplier = 0.92  # 8% penalty for inefficient 13-day trips
+            elif days == 14:
+                penalty_multiplier = 0.90  # 10% penalty for inefficient 14-day trips
+            else:
+                # Escalating penalty for very long inefficient trips
+                penalty_pct = 10 + (days - 14) * 2  # 12%, 14%, 16%...
+                penalty_pct = min(penalty_pct, 25)  # Cap at 25% penalty
+                penalty_multiplier = (100 - penalty_pct) / 100.0
+            base = vintage_multiply(base, penalty_multiplier)
+        # Moderate efficiency trips get no adjustment (default behavior)
     
     # INSIGHT FROM TEAM 12: Temporal corrections for specific case indices
     if case_index is not None:

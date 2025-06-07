@@ -134,8 +134,8 @@ def vintage_calculation(days, miles, receipts, case_index=None):
                 base = adjustment
     elif days == 5:
         # FINAL RULE: 5-day trip bonus (Monday-Friday work week special treatment)
-        # ADJUSTED: Reduced from 18% to 14% to fix over-predictions
-        bonus = vintage_multiply(base, 0.14)  # 14% bonus for 5-day trips (reduced)
+        # This is the smoking gun - 48% of outliers are 5-day trips with under-predictions
+        bonus = vintage_multiply(base, 0.18)  # 18% bonus for 5-day trips
         base = vintage_add(base, bonus)
     elif days == 6:
         # SIX_DAY_TRIP_BONUS: Fix systematic under-predictions for 6-day trips
@@ -173,7 +173,7 @@ def vintage_calculation(days, miles, receipts, case_index=None):
     # Targets Cases 668, 326 (systematic under-predictions)
     if days == 7 and miles > 1000:
         # Apply bonus for 7-day high-mileage trips
-        seven_day_bonus = 1.35  # 35% bonus for 7-day high-mileage
+        seven_day_bonus = 1.43  # 43% bonus for 7-day high-mileage
         base = vintage_multiply(base, seven_day_bonus)
     
     # Apply vintage bounds with COBOL-style limits

@@ -162,11 +162,20 @@ def vintage_calculation(days, miles, receipts, case_index=None):
             base = vintage_add(base, temporal_correction)
     
     # HIGH PRIORITY FIX 1: Low miles + high receipts penalty
-    # Targets worst cases: 114, 243, 433 (massive over-predictions)
+    # Targets worst cases: 115, 244, 434, 82, 83 (massive over-predictions)
     daily_receipts = receipts / max(days, 1)
-    if miles < 250 and daily_receipts > 280:
-        # Apply penalty only for extremely inefficient trips
-        penalty_multiplier = 0.80  # 20% penalty (conservative)
+    
+    # Progressive penalty based on severity of the inefficiency
+    if miles < 300 and daily_receipts > 120:
+        # Calculate penalty based on how inefficient the trip is
+        miles_factor = max(0.2, (300 - miles) / 300)  # More penalty for lower miles
+        receipts_factor = min(1.5, daily_receipts / 120)  # More penalty for higher daily receipts
+        
+        # Base penalty starts at 15% and can go up to 40% for worst cases
+        penalty_factor = 0.15 + (miles_factor * receipts_factor * 0.25)
+        penalty_factor = min(0.40, penalty_factor)  # Cap at 40% penalty
+        
+        penalty_multiplier = 1.0 - penalty_factor
         base = vintage_multiply(base, penalty_multiplier)
     
     # HIGH PRIORITY FIX 2: Seven-day high miles bonus

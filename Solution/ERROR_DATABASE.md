@@ -208,13 +208,17 @@
 - ✅ LOW_MILES_HIGH_RECEIPTS_PENALTY: Implemented (miles < 250, daily > $280, 20% penalty)
 - ✅ SEVEN_DAY_HIGH_MILES_BONUS: Implemented (days == 7, miles > 1000, 35% bonus)
 - ❌ ONE_DAY_EXTREME_SPENDING_PENALTY: Tested and failed (made overall performance worse)
-- 📝 SIX_DAY_TRIP_BONUS: Ready for implementation
-- 📝 LONG_TRIP_ENHANCED_PENALTY: Ready for implementation
+- ✅ SIX_DAY_TRIP_BONUS: Implemented (days == 6, 17% bonus) - SUCCESS!
+- ❌ LONG_TRIP_ENHANCED_PENALTY: Tested and failed (penalty too aggressive, reverted)
+- ✅ FIVE_DAY_BONUS_ADJUSTMENT: Reduced from 18% to 14% - SUCCESS!
+- ❌ ULTRA_LOW_MILES_PENALTY: Tested and failed (hurt long trips with ultra-low miles, reverted)
 
 ### **Current Performance:**
-- **Average Error**: $96.75 (improved from $97.62 baseline)
+- **Average Error**: $94.88 (improved from $95.23 previous)
 - **Exact Matches**: 189 (18.9%)
-- **Close Matches**: 461 (46.1%)
+- **Close Matches**: 460 (46.0%) 
+- **Score**: 9569.10 (improved from 9604.10)
+- **Maximum Error**: $714.17 (improved from $757.16)
 
 ### **Individual Case Improvements:**
 - Case 114: Error reduced from $757 to $250 (67% improvement) ✅
