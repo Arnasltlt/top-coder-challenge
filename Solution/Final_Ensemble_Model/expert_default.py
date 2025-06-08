@@ -112,26 +112,6 @@ def vintage_calculation(days, miles, receipts, case_index=None):
     base = vintage_add(base, miles_term)
     base = vintage_add(base, receipts_term)
 
-    # === RULE 1 : EFFICIENCY RATIO ADJUSTMENT (High-impact quick win) ===
-    #   • Inefficient trips → penalty 35 %
-    #   • Highly efficient trips → bonus 30 %
-    #   Definition:
-    #       eff_ratio = receipts / (miles + 1)    # avoids div-by-zero
-    #   Thresholds chosen from ERROR_DATABASE.md analysis
-    daily_receipts = receipts / max(days, 1)
-    eff_ratio = receipts / (miles + 1)
-
-    if miles < 300 and eff_ratio > 4.0:
-        # Low-miles, high-receipt inefficiency → penalise 35 %
-        base = vintage_multiply(base, 0.65)
-    elif miles > 700 and eff_ratio < 1.0:
-        # High-miles, low-receipt efficiency → add 30 % bonus
-        bonus_eff = vintage_multiply(base, 0.30)
-        base = vintage_add(base, bonus_eff)
-
-    # --------------------------------------------------------------------
-    # Existing non-linear special cases follow
-    
     # Apply non-linear adjustments from the refined v6 model, but with vintage arithmetic
     # These represent the "special cases" that would have been hardcoded in 1960s systems
     

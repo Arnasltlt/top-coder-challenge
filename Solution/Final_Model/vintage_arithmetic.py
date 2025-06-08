@@ -140,7 +140,8 @@ def vintage_calculation(days, miles, receipts, case_index=None):
     elif days == 6:
         # SIX_DAY_TRIP_BONUS: Fix systematic under-predictions for 6-day trips
         # Targets 62 cases with avg under-prediction of $113.23
-        bonus = vintage_multiply(base, 0.17)  # 17% bonus for 6-day trips
+        # OPTIMIZED: Reduced from 17% to 10% for better accuracy
+        bonus = vintage_multiply(base, 0.10)  # 10% bonus for 6-day trips
         base = vintage_add(base, bonus)
     
     # INSIGHT FROM TEAM 12: Temporal corrections for specific case indices

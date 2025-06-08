@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# GRAND SYNTHESIS BASELINE
-# Winner: Team 13 (Precision Artifact Analysis)
-# Best Average Error: $180.57
+# Final Model runner – isolated integration sandbox
+DAYS=$1
+MILES=$2
+RECEIPTS=$3
 
-# Call the Python vintage arithmetic model
-python3 13_Precision_Artifact_Analysis/vintage_arithmetic.py "$1" "$2" "$3"
+python3 "$(dirname "$0")/vintage_final.py" "$DAYS" "$MILES" "$RECEIPTS"

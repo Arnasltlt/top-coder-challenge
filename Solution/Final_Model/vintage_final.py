@@ -112,22 +112,48 @@ def vintage_calculation(days, miles, receipts, case_index=None):
     base = vintage_add(base, miles_term)
     base = vintage_add(base, receipts_term)
 
-    # === RULE 1 : EFFICIENCY RATIO ADJUSTMENT (High-impact quick win) ===
-    #   • Inefficient trips → penalty 35 %
-    #   • Highly efficient trips → bonus 30 %
-    #   Definition:
-    #       eff_ratio = receipts / (miles + 1)    # avoids div-by-zero
-    #   Thresholds chosen from ERROR_DATABASE.md analysis
-    daily_receipts = receipts / max(days, 1)
+    # -------------------------------------------------------------
+    # RULE 1: Efficiency ratio penalty / bonus (already present)
+    # -------------------------------------------------------------
     eff_ratio = receipts / (miles + 1)
-
     if miles < 300 and eff_ratio > 4.0:
-        # Low-miles, high-receipt inefficiency → penalise 35 %
-        base = vintage_multiply(base, 0.65)
+        base = vintage_multiply(base, 0.65)  # 35% penalty
     elif miles > 700 and eff_ratio < 1.0:
-        # High-miles, low-receipt efficiency → add 30 % bonus
         bonus_eff = vintage_multiply(base, 0.30)
         base = vintage_add(base, bonus_eff)
+
+    # -------------------------------------------------------------
+    # RULE 2: One-day high-miles special formula
+    # -------------------------------------------------------------
+    if days == 1 and miles > 800:
+        # Replace computation with minimalist formula tuned for same-day long hauls
+        part1 = vintage_multiply(miles, 0.40)
+        part2 = vintage_multiply(receipts, 0.30)
+        replacement = vintage_add(part1, part2)
+        replacement = vintage_add(replacement, 75.0)
+        base = replacement
+
+    # -------------------------------------------------------------
+    # RULE 3: Progressive long-trip penalty (≥10 days)
+    # -------------------------------------------------------------
+    if days >= 10:
+        penalty_factor = 1.0 - 0.04 * (days - 9)
+        if penalty_factor < 0.80:
+            penalty_factor = 0.80  # cap at 20% reduction
+        base = vintage_multiply(base, penalty_factor)
+
+    # -------------------------------------------------------------
+    # RULE 4: Adaptive receipt curve (U-shaped processing)
+    # -------------------------------------------------------------
+    daily_receipts = receipts / max(days, 1)
+    if daily_receipts < 120:
+        pass  # full credit already in base
+    elif daily_receipts < 240:
+        # moderate penalty – scale back 15 % of receipt portion estimate
+        base = vintage_multiply(base, 0.90)
+    else:
+        # severe penalty for very high spending
+        base = vintage_multiply(base, 0.75)
 
     # --------------------------------------------------------------------
     # Existing non-linear special cases follow
